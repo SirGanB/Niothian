@@ -27,3 +27,19 @@ flutter:
 
   assets:
     - img/
+  
+  fonts:
+    - family: PressStart2P
+      fonts:
+        - asset: fonts/PressStart2P-Regular.ttf
+        
+    - family: CourierPrime
+      fonts:
+        - asset: fonts/CourierPrime-Bold.ttf
+        - asset: fonts/CourierPrime-BoldItalic.ttf
+        - asset: fonts/CourierPrime-Italic.ttf
+        - asset: fonts/CourierPrime-Regular.ttf
+        
+    - family: BebasNeue
+      fonts:
+        - asset: fonts/BebasNeue-Regular.ttf

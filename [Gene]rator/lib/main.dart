@@ -1,7 +1,4 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:niothian/widget/cardStatus.dart';
 
 void main() {
   runApp(
@@ -14,93 +11,86 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ButtonStyle style =
-        TextButton.styleFrom(primary: Theme.of(context).colorScheme.onPrimary);
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueGrey.shade900,
-          title: Center(
-            child: Text("[Gene]rator"),
+          backgroundColor: Colors.indigo,
+          title: const Center(
+            child: Text("My Profile"),
           ),
-          actions: <Widget>[
-            TextButton(
-              style: style,
-              onPressed: () {},
-              child: const Text('Juntar-se'),
-            ),
-            TextButton(
-              style: style,
-              onPressed: () {},
-              child: const Text('Sair'),
-            )
-          ],
         ),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.indigoAccent,
         body: SafeArea(
-          child: Row(
-            children: [
-              Container(
-                width: 200,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.all(10),
-                color: Colors.pink,
-                child: Center(
-                  child: Text("Sexualidade"),
+          child: ListView(
+            children: const <Widget>[
+              CircleAvatar(
+                backgroundColor: Colors.indigo,
+                maxRadius: 200,
+                minRadius: 50,
+                child: Icon(
+                  Icons.people,
+                  size: 250,
+                  color: Colors.white,
                 ),
               ),
-              Container(
-                width: 200,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.all(10),
-                color: Colors.red,
-                child: Center(
-                  child: Text("Vida"),
+              SizedBox(
+                height: 50,
+                width: 250,
+                child: Divider(
+                  color: Colors.indigo,
                 ),
               ),
-              Container(
-                width: 200,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.all(10),
-                color: Colors.orange,
-                child: Center(
-                  child: Text("Cura"),
+              Center(
+                child: Text(
+                  "@Sir_GanB",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'PressStart2P',
+                    letterSpacing: 1.5,
+                  ),
                 ),
               ),
-              Container(
-                width: 200,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.all(10),
-                color: Colors.yellow,
-                child: Center(
-                  child: Text("Luz do Sol"),
+              Center(
+                child: Text(
+                  "Flutter Developer",
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'CourierPrime',
+                    letterSpacing: 5,
+                  ),
                 ),
               ),
-              Container(
-                width: 200,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.all(10),
-                color: Colors.green,
-                child: Center(
-                  child: Text("Natureza"),
+              SizedBox(
+                height: 50,
+                width: 250,
+                child: Divider(
+                  color: Colors.indigo,
                 ),
               ),
-              Container(
-                width: 200,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.all(10),
-                color: Colors.blue,
-                child: Center(
-                  child: Text("Serenidade e Harmonia"),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    size: 30,
+                    color: Colors.indigoAccent,
+                  ),
+                  title: Text("ganb.tads@gmail.com"),
                 ),
               ),
-              Container(
-                width: 200,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.all(10),
-                color: Colors.purple,
-                child: Center(
-                  child: Text("Espírito"),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone_android,
+                    size: 30,
+                    color: Colors.indigoAccent,
+                  ),
+                  title: Text("(44) 9 8443-0982"),
                 ),
               ),
             ],
