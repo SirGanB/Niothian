@@ -14,87 +14,279 @@ class Home extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.indigo,
-          title: const Center(
-            child: Text("My Profile"),
-          ),
+          backgroundColor: Colors.black,
+          title: const Text("Calculadora"),
         ),
-        backgroundColor: Colors.indigoAccent,
-        body: SafeArea(
-          child: ListView(
-            children: const <Widget>[
-              CircleAvatar(
-                backgroundColor: Colors.indigo,
-                maxRadius: 200,
-                minRadius: 50,
-                child: Icon(
-                  Icons.people,
-                  size: 250,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(
-                height: 50,
-                width: 250,
-                child: Divider(
-                  color: Colors.indigo,
-                ),
-              ),
-              Center(
+        backgroundColor: Colors.black,
+        body: Column(
+          children: [
+            Container(
+              color: Colors.black,
+              height: 120,
+              child: const Center(
                 child: Text(
-                  "@Sir_GanB",
+                  "128√e980",
                   style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'PressStart2P',
-                    letterSpacing: 1.5,
-                  ),
+                      fontFamily: "PressStart2P",
+                      color: Colors.white,
+                      fontSize: 30),
                 ),
               ),
-              Center(
-                child: Text(
-                  "Flutter Developer",
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'CourierPrime',
-                    letterSpacing: 5,
-                  ),
+            ),
+            Column(
+              children: [
+                const Divider(
+                  height: 20,
+                  color: Colors.orange,
                 ),
-              ),
-              SizedBox(
-                height: 50,
-                width: 250,
-                child: Divider(
-                  color: Colors.indigo,
+                const SizedBox(height: 50),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "AC",
+                        style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Icon(
+                        Icons.backspace,
+                        color: Colors.orange,
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "%",
+                        style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "/",
+                        style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              Card(
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.mail,
-                    size: 30,
-                    color: Colors.indigoAccent,
-                  ),
-                  title: Text("ganb.tads@gmail.com"),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "7",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "8",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "9",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "x",
+                        style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              Card(
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.phone_android,
-                    size: 30,
-                    color: Colors.indigoAccent,
-                  ),
-                  title: Text("(44) 9 8443-0982"),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "4",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "5",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "6",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "-",
+                        style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-            ],
-          ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "1",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "2",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "3",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 35,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "+",
+                        style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Icon(
+                        Icons.change_circle,
+                        size: 30,
+                        color: Colors.orange,
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        "0",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.blueGrey[900],
+                      onPressed: null,
+                      child: const Text(
+                        ",",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                    const FloatingActionButton(
+                      backgroundColor: Colors.orange,
+                      onPressed: null,
+                      child: Text(
+                        "=",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
