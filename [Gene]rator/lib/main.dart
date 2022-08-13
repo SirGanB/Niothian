@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,72 +14,482 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int nmbDiceL = 1;
-  int nmbDiceR = 1;
-
-  rowboth() {
-    nmbDiceL = Random().nextInt(6) + 1;
-    nmbDiceR = Random().nextInt(6) + 1;
-  }
-
+  String exibir = "Hello World";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepOrange,
           title: const Center(
             child: Text(
-              "Dice [Gene]rator",
-              style: TextStyle(fontFamily: 'PressStart2P'),
+              "Calculadora",
+              style: TextStyle(
+                fontFamily: 'PressStart2P',
+                fontSize: 20,
+              ),
             ),
           ),
+          backgroundColor: Colors.blue,
         ),
-        backgroundColor: Colors.orange,
-        body: Center(
-          child: Row(
-            children: [
-              Expanded(
-                child: TextButton(
-                  onPressed: () {
-                    setState(
-                      () {
-                        nmbDiceL = Random().nextInt(6) + 1;
-                      },
-                    );
-                  },
-                  child: Image.asset('assets/dice/dice$nmbDiceL.png'),
-                ),
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      setState(() {
-                        rowboth();
-                      });
-                    },
-                    child: const Icon(
-                      Icons.change_circle,
-                      size: 100,
-                      color: Colors.deepOrange,
+        backgroundColor: Colors.lightBlue,
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Container(
+                color: Colors.lightBlue[700],
+                child: Padding(
+                  padding: const EdgeInsets.all(6.0),
+                  child: Container(
+                    height: 150,
+                    color: Colors.lightBlue[600],
+                    child: Center(
+                      child: Text(
+                        exibir,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontFamily: 'PressStart2P',
+                        ),
+                      ),
                     ),
                   ),
-                ],
-              ),
-              Expanded(
-                child: TextButton(
-                  onPressed: () {
-                    setState(() {
-                      nmbDiceR = Random().nextInt(6) + 1;
-                    });
-                  },
-                  child: Image.asset('assets/dice/dice$nmbDiceR.png'),
                 ),
               ),
-            ],
-          ),
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "CLEAR";
+                          });
+                        }),
+                        child: const Text(
+                          "AC",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "DEL";
+                          });
+                        }),
+                        child: const Icon(Icons.backspace_outlined),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "%";
+                          });
+                        }),
+                        child: const Text(
+                          "%",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "/";
+                          });
+                        }),
+                        child: const Text(
+                          "/",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "7";
+                          });
+                        }),
+                        child: const Text(
+                          "7",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "8";
+                          });
+                        }),
+                        child: const Text(
+                          "8",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "9";
+                          });
+                        }),
+                        child: const Text(
+                          "9",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "x";
+                          });
+                        }),
+                        child: const Text(
+                          "x",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "4";
+                          });
+                        }),
+                        child: const Text(
+                          "4",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "5";
+                          });
+                        }),
+                        child: const Text(
+                          "5",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "6";
+                          });
+                        }),
+                        child: const Text(
+                          "6",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "+";
+                          });
+                        }),
+                        child: const Text(
+                          "+",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "1";
+                          });
+                        }),
+                        child: const Text(
+                          "1",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "2";
+                          });
+                        }),
+                        child: const Text(
+                          "2",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "3";
+                          });
+                        }),
+                        child: const Text(
+                          "3",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "-";
+                          });
+                        }),
+                        child: const Text(
+                          "-",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "0";
+                          });
+                        }),
+                        child: const Text(
+                          "0",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = ".";
+                          });
+                        }),
+                        child: const Text(
+                          ".",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ElevatedButton(
+                        onPressed: (() {
+                          setState(() {
+                            exibir = "=";
+                          });
+                        }),
+                        child: const Text(
+                          "=",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
