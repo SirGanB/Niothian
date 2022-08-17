@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:niothian/widget/nio_block_stats.dart';
+import 'package:niothian/widget/nio_stats.dart';
 
 void main() {
   runApp(
@@ -15,6 +15,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  String image = 'img/characterImage.jpg';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,10 +30,38 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.indigo[700],
         ),
-        backgroundColor: Colors.grey,
-        body: const NioBlockStats(),
+        backgroundColor: Colors.indigo,
+        body: SingleChildScrollView(
+          child: Column(children: [
+            Container(
+              color: Colors.blue,
+              child: Row(children: [
+                Container(
+                  color: Colors.blue,
+                  height: 250,
+                  child: Stack(children: [
+                    Image.asset(image),
+                    Image.asset('img/profile.png', color: Colors.black)
+                  ]),
+                ),
+              ]),
+            ),
+            Row(children: [
+              Column(children: [
+                NioStats(atributo: "Força"),
+                NioStats(atributo: "Destreza"),
+                NioStats(atributo: "Força"),
+              ]),
+              Column(children: [
+                NioStats(atributo: "Força"),
+                NioStats(atributo: "Destreza"),
+                NioStats(atributo: "Força"),
+              ]),
+            ]),
+          ]),
+        ),
       ),
     );
   }

@@ -1,95 +1,99 @@
 import 'package:flutter/material.dart';
+import 'package:niothian/widget/nio_proficiency.dart';
 
 class NioStats extends StatefulWidget {
-  const NioStats({Key? key}) : super(key: key);
+  NioStats({Key? key, this.atributo}) : super(key: key);
+  String? atributo;
+
+  String get getAtributo {
+    return atributo!;
+  }
+
+  set setName(String atributo) {
+    atributo = this.atributo!;
+  }
 
   @override
   State<NioStats> createState() => _NioStats();
 }
 
+@override
+State<NioStats> createState() => _NioStats();
+
 class _NioStats extends State<NioStats> {
-  final TextEditingController _textEditingController = TextEditingController();
-  String atributo = "Inteligência";
-  int valor = 6;
+  //Definição de Variáveis
+  int valor = 10;
+  late NioStats nioStats;
+  @override
+  void initState() {
+    nioStats = NioStats(atributo: widget.atributo);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     String modificador = ((valor - 10) ~/ 2).toString();
-    return Padding(
-      padding: const EdgeInsets.all(3.0),
-      child: Stack(
-        alignment: AlignmentDirectional.bottomCenter,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              color: Colors.grey[400],
-              child: Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.grey[500],
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Column(
-                      children: [
-                        Text(
-                          atributo,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'CourierPrime',
-                            fontSize: 11,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          (valor > 10 ? "+$modificador" : modificador),
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'CourierPrime',
-                            fontSize: 40,
-                          ),
-                        )
-                      ],
+    return Row(children: [
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5),
+        child: Stack(alignment: AlignmentDirectional.bottomCenter, children: [
+          SizedBox(
+            height: 160,
+            child: Stack(alignment: AlignmentDirectional.center, children: [
+              SizedBox(
+                height: 80,
+                child: Column(children: [
+                  //nome do atributo
+                  Text(
+                    nioStats.getAtributo,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
                     ),
                   ),
-                ),
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.grey[700],
-            child: Padding(
-              padding: const EdgeInsets.all(3.0),
-              child: Container(
-                height: 30,
-                width: 40,
-                color: Colors.grey[800],
-                child: TextField(
-                  controller: _textEditingController,
-                  keyboardType: TextInputType.number,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'CourierPrime',
-                    fontSize: 30,
+                  //modificador
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      (valor > 10 ? "+$modificador" : modificador),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),
+                    ),
                   ),
-                  onChanged: (fodase) {
-                    setState(() {
-                      valor = int.parse(_textEditingController.text);
-                    });
-                  },
-                ),
+                ]),
               ),
-            ),
+              //moldura
+              Image.asset(
+                'img/square.png',
+                color: Colors.white,
+                height: 120,
+              ),
+            ]),
           ),
-        ],
+          SizedBox(
+            width: 50,
+            child: Stack(alignment: AlignmentDirectional.center, children: [
+              Container(height: 12, width: 50, color: Colors.indigo),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10, left: 3),
+                child: TextField(
+                    style: const TextStyle(color: Colors.white, fontSize: 15),
+                    textAlign: TextAlign.center,
+                    onChanged: (texto) {
+                      setState(() {
+                        valor = int.parse(texto);
+                      });
+                    }),
+              ),
+              Image.asset('img/circle.png', color: Colors.white),
+            ]),
+          ),
+        ]),
       ),
-    );
+      Column(children: const [NioProficiecy()])
+    ]);
   }
 }
