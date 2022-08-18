@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:niothian/widget/nio_stats.dart';
+import 'package:niothian/widget/nio_character_profile.dart';
 
 void main() {
   runApp(
@@ -15,7 +15,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String image = 'img/characterImage.jpg';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,40 +25,17 @@ class _HomeState extends State<Home> {
               "[Gene]rator",
               style: TextStyle(
                 fontFamily: 'PressStart2P',
-                fontSize: 20,
+                fontSize: 16,
               ),
             ),
           ),
-          backgroundColor: Colors.indigo[700],
+          backgroundColor: Colors.green,
         ),
-        backgroundColor: Colors.indigo,
-        body: SingleChildScrollView(
-          child: Column(children: [
-            Container(
-              color: Colors.blue,
-              child: Row(children: [
-                Container(
-                  color: Colors.blue,
-                  height: 250,
-                  child: Stack(children: [
-                    Image.asset(image),
-                    Image.asset('img/profile.png', color: Colors.black)
-                  ]),
-                ),
-              ]),
-            ),
-            Row(children: [
-              Column(children: [
-                NioStats(atributo: "Força"),
-                NioStats(atributo: "Destreza"),
-                NioStats(atributo: "Força"),
-              ]),
-              Column(children: [
-                NioStats(atributo: "Força"),
-                NioStats(atributo: "Destreza"),
-                NioStats(atributo: "Força"),
-              ]),
-            ]),
+        backgroundColor: Colors.green[300],
+        body: SafeArea(
+          child: Column(children: const [
+            NioCharacterProfile(),
+            Expanded(flex: 3, child: SizedBox()),
           ]),
         ),
       ),

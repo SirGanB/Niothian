@@ -17,9 +17,6 @@ class NioStats extends StatefulWidget {
   State<NioStats> createState() => _NioStats();
 }
 
-@override
-State<NioStats> createState() => _NioStats();
-
 class _NioStats extends State<NioStats> {
   //Definição de Variáveis
   int valor = 10;
@@ -74,11 +71,12 @@ class _NioStats extends State<NioStats> {
             ]),
           ),
           SizedBox(
+            height: 100,
             width: 50,
             child: Stack(alignment: AlignmentDirectional.center, children: [
               Container(height: 12, width: 50, color: Colors.indigo),
               Padding(
-                padding: const EdgeInsets.only(bottom: 10, left: 3),
+                padding: const EdgeInsets.only(bottom: 3, left: 3),
                 child: TextField(
                     style: const TextStyle(color: Colors.white, fontSize: 15),
                     textAlign: TextAlign.center,

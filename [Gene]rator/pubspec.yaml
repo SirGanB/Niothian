@@ -28,6 +28,7 @@ flutter:
   assets:
     - assets/img/
     - assets/dice/
+    - assets/icons/
   
   fonts:
     - family: PressStart2P
