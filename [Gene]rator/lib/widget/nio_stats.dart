@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:niothian/widget/nio_proficiency.dart';
+import 'package:niothian/widget/obj_proficiencia.dart';
 
 class NioStats extends StatefulWidget {
   NioStats({Key? key, this.atributo}) : super(key: key);
@@ -91,7 +91,7 @@ class _NioStats extends State<NioStats> {
           ),
         ]),
       ),
-      Column(children: const [NioProficiecy()])
+      Column(children: const [ObjProficiency()])
     ]);
   }
 }

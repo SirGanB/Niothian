@@ -13,11 +13,11 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
     return Expanded(
       flex: 1,
       child: Card(
-        color: Colors.grey[800],
+        color: Colors.indigo,
         child: Column(children: [
-          const SizedBox(height: 5),
+          const SizedBox(height: 8),
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 5),
+            padding: EdgeInsets.symmetric(horizontal: 8),
             child: SizedBox(
               height: 40,
               child: TextField(
@@ -37,7 +37,7 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
             child: SizedBox(
               child: Row(children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: SizedBox(
                     height: 100,
                     child: Image.asset('img/characterImage.jpg'),
@@ -60,7 +60,7 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                                 style: TextStyle(),
                               ),
                             ),
-                            SizedBox(height: 5),
+                            SizedBox(height: 8),
                             Expanded(
                               child: TextField(
                                 decoration: InputDecoration(
@@ -75,7 +75,7 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                           ]),
                         ),
                       ),
-                      const SizedBox(width: 5),
+                      const SizedBox(width: 8),
                       Expanded(
                         child: SizedBox(
                           child: Column(children: const [
@@ -90,7 +90,7 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                                 style: TextStyle(),
                               ),
                             ),
-                            SizedBox(height: 5),
+                            SizedBox(height: 8),
                             Expanded(
                               child: TextField(
                                 decoration: InputDecoration(
@@ -105,7 +105,7 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                           ]),
                         ),
                       ),
-                      const SizedBox(width: 5),
+                      const SizedBox(width: 8),
                     ]),
                   ),
                 ),
@@ -115,7 +115,7 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
           const Divider(),
           SizedBox(
             child: Row(children: [
-              const SizedBox(width: 5),
+              const SizedBox(width: 8),
               Expanded(
                 child: SizedBox(
                   height: 40,
@@ -135,7 +135,7 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                   ),
                 ),
               ),
-              const SizedBox(width: 5),
+              const SizedBox(width: 8),
               Expanded(
                 child: SizedBox(
                   height: 40,
@@ -154,7 +154,7 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                   ),
                 ),
               ),
-              const SizedBox(width: 5),
+              const SizedBox(width: 8),
               Expanded(
                 child: SizedBox(
                   height: 40,
@@ -173,7 +173,7 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                   ),
                 ),
               ),
-              const SizedBox(width: 5),
+              const SizedBox(width: 8),
               Expanded(
                 child: SizedBox(
                   height: 40,
@@ -192,10 +192,10 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                   ),
                 ),
               ),
-              const SizedBox(width: 5),
+              const SizedBox(width: 8),
             ]),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 8),
         ]),
       ),
     );

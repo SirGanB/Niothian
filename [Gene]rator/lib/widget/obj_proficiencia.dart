@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class NioProficiecy extends StatefulWidget {
-  const NioProficiecy({Key? key}) : super(key: key);
+class ObjProficiency extends StatefulWidget {
+  const ObjProficiency({Key? key}) : super(key: key);
 
   @override
-  State<NioProficiecy> createState() => _NioProficiecyState();
+  State<ObjProficiency> createState() => _ObjProficiency();
 }
 
-class _NioProficiecyState extends State<NioProficiecy> {
+class _ObjProficiency extends State<ObjProficiency> {
   bool on = false;
   int mod = 0;
   @override
