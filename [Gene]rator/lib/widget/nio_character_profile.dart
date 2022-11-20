@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:niothian/widget/nano/frm_text.dart';
 
 class NioCharacterProfile extends StatefulWidget {
   const NioCharacterProfile({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
       flex: 1,
       child: Card(
         color: Colors.indigo,
-        child: Column(children: [
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
           const SizedBox(height: 8),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
@@ -40,7 +41,9 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: SizedBox(
                     height: 100,
-                    child: Image.asset('img/characterImage.jpg'),
+                    child: Image.asset(
+                      'img/characterImage.jpg',
+                    ),
                   ),
                 ),
                 Expanded(
@@ -48,8 +51,8 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                     child: Row(children: [
                       Expanded(
                         child: SizedBox(
-                          child: Column(children: const [
-                            Expanded(
+                          child: Column(children: [
+                            const Expanded(
                               child: TextField(
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
@@ -60,18 +63,8 @@ class _NioCharacterProfile extends State<NioCharacterProfile> {
                                 style: TextStyle(),
                               ),
                             ),
-                            SizedBox(height: 8),
-                            Expanded(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  counterText: '',
-                                  labelText: 'Raça',
-                                ),
-                                maxLength: 15,
-                                style: TextStyle(),
-                              ),
-                            ),
+                            const SizedBox(height: 8),
+                            TextForm(titulo: "nome")
                           ]),
                         ),
                       ),

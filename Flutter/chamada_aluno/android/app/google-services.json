@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "64467653858",
+    "project_id": "chamada-aluno-361022",
+    "storage_bucket": "chamada-aluno-361022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64467653858:android:c47212e8ad55f70d29babb",
+        "android_client_info": {
+          "package_name": "br.edu.ifpr.assis.tads.u2022.nio_chamada_aluno"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64467653858-li52uc409ru39shv1eue6hq93gf1ocag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-rOA1EMDar8sllg5v-mknSkLkeUB4EKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64467653858-li52uc409ru39shv1eue6hq93gf1ocag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:niothian/widget/nio_character_profile.dart';
-import 'package:niothian/widget/nio_stats.dart';
+import 'package:niothian/widget/viewer/fichas.dart';
+import 'package:niothian/widget/viewer/mesas.dart';
+import 'package:niothian/widget/viewer/social.dart';
 
 void main() => runApp(const MyApp());
 
@@ -25,7 +26,6 @@ class MyStatefulWidget extends StatefulWidget {
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
 }
 
-/// AnimationControllers can be created with `vsync: this` because of TickerProviderStateMixin.
 class _MyStatefulWidgetState extends State<MyStatefulWidget>
     with TickerProviderStateMixin {
   late TabController _tabController;
@@ -41,22 +41,23 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget>
     return Scaffold(
       appBar: AppBar(
         title: const Text('[Gene]rator'),
-        bottom: TabBar(controller: _tabController, tabs: const [
-          Tab(icon: Icon(Icons.people)),
-          Tab(icon: Icon(Icons.beach_access_sharp)),
-          Tab(icon: Icon(Icons.brightness_5_sharp)),
-        ]),
+        bottom: TabBar(
+            indicatorColor: Colors.yellow,
+            labelColor: Colors.yellowAccent[100],
+            controller: _tabController,
+            tabs: const [
+              Tab(child: Text("Mesas", style: TextStyle(color: Colors.red))),
+              Tab(child: Text("Social", style: TextStyle(color: Colors.green))),
+              Tab(child: Text("Fichas", style: TextStyle(color: Colors.blue))),
+            ]),
       ),
-      body: TabBarView(controller: _tabController, children: [
-        Container(
-          color: Colors.grey[500],
-          child: Column(children: const [
-            NioCharacterProfile(),
-            Expanded(flex: 3, child: SizedBox())
-          ]),
-        ),
-        const Center(child: Text("It's rainy here")),
-        const Center(child: Text("It's sunny here")),
+      body: TabBarView(controller: _tabController, children: const [
+        //Aba Mesas
+        Mesas(),
+        //Aba Social
+        Social(),
+        //Aba Fichas
+        Fichas()
       ]),
     );
   }

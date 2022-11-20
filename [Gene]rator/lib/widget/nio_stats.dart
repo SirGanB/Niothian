@@ -35,7 +35,7 @@ class _NioStats extends State<NioStats> {
         padding: const EdgeInsets.symmetric(horizontal: 5),
         child: Stack(alignment: AlignmentDirectional.bottomCenter, children: [
           SizedBox(
-            height: 160,
+            height: 220,
             child: Stack(alignment: AlignmentDirectional.center, children: [
               SizedBox(
                 height: 80,
@@ -74,7 +74,7 @@ class _NioStats extends State<NioStats> {
             height: 100,
             width: 50,
             child: Stack(alignment: AlignmentDirectional.center, children: [
-              Container(height: 12, width: 50, color: Colors.indigo),
+              Container(height: 12, width: 50, color: Colors.grey),
               Padding(
                 padding: const EdgeInsets.only(bottom: 3, left: 3),
                 child: TextField(
